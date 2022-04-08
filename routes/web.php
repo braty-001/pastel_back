@@ -32,3 +32,11 @@ $router->group(['prefix' => 'Products'], function () use ($router) {
     $router->put('/', 'ProductsController@alter');
     $router->delete('/', 'ProductsController@delete');
 });
+
+$router->group(['prefix' => 'Orders'], function () use ($router) {
+    $router->get('/', 'OrdersController@list');
+    $router->get('/{id}', 'OrdersController@get');
+    $router->post('/', 'OrdersController@create');
+    $router->put('/', 'OrdersController@alter');
+    $router->delete('/', 'OrdersController@delete');
+});
