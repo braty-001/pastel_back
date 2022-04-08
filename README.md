@@ -1,24 +1,26 @@
-# Lumen PHP Framework
+# Back end do teste da pastelaria
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/lumen)](https://packagist.org/packages/laravel/lumen-framework)
+Back end feito em lumem RESTful, com migrations
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+## Consulta, cadastro, alteração, e remoção
+    - clientes 
+    - produtos 
+    - perdidos 
 
-## Official Documentation
+### Pré-requisitos
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [php8](https://www.php.net/releases/8.0/en.php) ,[mysql](https://www.mysql.com/downloads/) e [composer](https://getcomposer.org/download/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/) e um Cliente de api [Postman](https://www.postman.com/downloads/) 
 
-## Contributing
+Clone o repositorio do projeto 
+    git clone git@github.com:braty-001/pastel_back.git
+    
+Criar um banco de dados chamado pastel 
+    CREATE database pastel;
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Executar o composer dentro da pasta pastel_back
+    composer install
+    
+Executar o migrations dentro da pasta pastel_back
+    php artisan migrate
